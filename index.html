@@ -43,7 +43,7 @@ Have fun creating your portfolio on this template!!! -->
     <!-- Fill content with the URL of this portfolio you'll host -->
     <meta property="og:url" content="https://devfolio.js.org/" />
     <!-- Fill content with the title of your portfolio(Recommended to use what you put in <title> tag) -->
-    <meta property="og:title" content="[Your name here] | Developer" />
+    <meta property="og:title" content="Nicholas Smith | Developer" />
     <!-- Give a short description that'll show up when you/someone shares your portfolio on different platform -->
     <meta property="og:description" content="Made using DevFolio Template" />
     <!-- Add a thumbnail image in assets folder and fill the content attr with URL to that thumbnail 
@@ -105,6 +105,12 @@ Have fun creating your portfolio on this template!!! -->
       gtag("config", "UA-122228201-4")
     </script>-->
     <!-- End of Google Analytics -->
+  <style>
+    #hiddenNumber,
+    #hiddenEmail {
+    display: none;
+    }
+  </style>
   </head>
   <body>
     <!-- Hero Section -->
@@ -116,7 +122,7 @@ Have fun creating your portfolio on this template!!! -->
           I'm a Software Engineer.
         </h1>
         <p class="hero-cta">
-          <a class="cta-btn cta-btn--hero" href="#about">Get in touch</a>
+          <a class="cta-btn cta-btn--hero" href="#about">Read bio</a>
         </p>
       </section>
       <a href="#about" class="scroll-down-link" aria-label="scroll-down">
@@ -375,8 +381,40 @@ A dictionary search app.
         <h2 class="section-title">Contact</h2>
         <div class="contact-wrapper">
           <!--<p class="contact-wrapper__text">[Put your call to action here]</p>-->
-          <a href="mailto:njsmith6@gmail.com" class="cta-btn cta-btn--resume">E-mail</a> </br>
+          <!--<a href="mailto:njsmith6@gmail.com" class="cta-btn cta-btn--resume">E-mail</a> </br>-->
           <!--<a href="tel:+16315667808" class="cta-btn cta-btn--resume">Phone</a>-->
+
+          <a onclick="revealEmail()" class="cta-btn cta-btn--resume">E-mail</a>
+          <div id="hiddenEmail">
+            <a href="mailto:njsmith6@gmail.com">njsmith6@gmail.com</a>
+          </div>
+          
+          <script>
+            function revealEmail() {
+              const hiddenEmail = document.getElementById("hiddenEmail");
+              if (hiddenEmail.style.display === "none") {
+              hiddenEmail.style.display = "block";} else {
+              hiddenEmail.style.display = "none";
+              }
+              }
+          </script>
+          </br>
+          <a onclick="revealPhoneNumber()" class="cta-btn cta-btn--resume">Phone</a>
+          <div id="hiddenNumber">
+            <p>(631) 566-7808</p>
+          </div>
+
+          <script>
+            function revealPhoneNumber() {
+              //Get the hidden content element
+              const hiddenNumber = document.getElementById("hiddenNumber");
+              //Toggle the display property to reveal or hide the content
+              if (hiddenNumber.style.display === "none") {
+              hiddenNumber.style.display = "block";} else {
+              hiddenNumber.style.display = "none";
+              }
+              }
+          </script>
         </div>
       </div>
     </section>

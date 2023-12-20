@@ -94,21 +94,24 @@ Have fun creating your portfolio on this template!!! -->
     #hiddenEmail {
       display: none;
     }
+  #nav {
+  display: inline-block;
+  /*padding-top: 2em;*/
+  }
   </style>
 
 </head>
 
 <body>
-  <div className="Header">
+    <div className="box">
     <ul className="Header">
-      <li className="nav"><a href="#about" class="cta-btn text-color-main">About</a></li>
-      <li className="nav"><a href="#skills" class="cta-btn text-color-main">Skills</a></li>
-      <li className="nav"><a href="#projects" class="cta-btn text-color-main">Projects</a></li>
-      <li className="nav"><a href="ns_resume.pdf" target="_blank" class="cta-btn text-color-main">Resume</a></li>
-      <li className="nav"><a href="#contact" class="cta-btn text-color-main">Contact</a></li>
-      <li className="nav">
+      <li id="nav"><a href="#about" class="cta-btn text-color-main">About</a></li>
+      <li id="nav"><a href="/assets/nsmith_resume.pdf" target="_blank" class="cta-btn text-color-main">Resume</a></li>
+      <li id="nav"><a href="#skills" class="cta-btn text-color-main">Skills</a></li>
+      <li id="nav"><a href="#projects" class="cta-btn text-color-main">Projects</a></li>
+      <li id="nav"><a href="#contact" class="cta-btn text-color-main">Contact</a></li>
     </ul>
-  </div>
+    </div>
   <!-- Hero Section -->
   <div id="hero">
     <section class="container">
